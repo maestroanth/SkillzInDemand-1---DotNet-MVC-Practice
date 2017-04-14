@@ -8,9 +8,10 @@ using WebApplication4.Models;
 namespace WebApplication4.Migrations
 {
     [DbContext(typeof(AlbumContext))]
-    partial class AlbumContextModelSnapshot : ModelSnapshot
+    [Migration("20170413195700_validation")]
+    partial class validation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -32,8 +33,6 @@ namespace WebApplication4.Migrations
                         .HasMaxLength(60);
 
                     b.Property<decimal>("Price");
-
-                    b.Property<int>("Rank");
 
                     b.Property<DateTime>("ReleaseDate");
 
